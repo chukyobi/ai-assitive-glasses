@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: postgresql://asg_db_owner:npg_aYP7O3bXcfsv@ep-lucky-dream-a4g3ig4y-pooler.us-east-1.aws.neon.tech/asg_db?sslmode=require
+    url: jdbc:postgresql://asg_db_owner:npg_aYP7O3bXcfsv@ep-lucky-dream-a4g3ig4y-pooler.us-east-1.aws.neon.tech/asg_db?sslmode=require
     username: asg_db_owner
     password: npg_aYP7O3bXcfsv
     driver-class-name: org.postgresql.Driver
@@ -19,7 +19,7 @@ spring:
 app:
   jwt:
     secret: your-256-bit-secret-key-change-this-for-production
-    expiration: 86400000 # 24 hours in milliseconds
+    expiration: 86400000 
 
 spring:
   mail:
