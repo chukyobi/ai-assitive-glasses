@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: postgresql://asg_db_owner:npg_aYP7O3bXcfsv@ep-lucky-dream-a4g3ig4y-pooler.us-east-1.aws.neon.tech/asg_db?sslmode=require
+    username: asg_db_owner
+    password: npg_aYP7O3bXcfsv
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+app:
+  jwt:
+    secret: your-256-bit-secret-key-change-this-for-production
+    expiration: 86400000 # 24 hours in milliseconds
+
+spring:
+  mail:
+    host: smtp.your-email-provider.com
+    port: 587
+    username: your-email@example.com
+    password: your-email-password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        transport:
+          protocol: smtp
+          rfc822: true
+
+app:
+  frontend:
+    url: http://localhost:3000
